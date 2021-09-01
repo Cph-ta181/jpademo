@@ -23,6 +23,12 @@ public class Tester {
         Person p1 = new Person("Person1", 1963);
         Person p2 = new Person("Person2", 1950);
         
+        Address a1 = new Address("Street1", 2021, "City1");
+        Address a2 = new Address("street 2", 20202, "CIIITY");
+        
+        p1.setAddress(a1);
+        p2.setAddress(a2);
+        
         em.getTransaction().begin();
         em.persist(p1);
         em.persist(p2);
